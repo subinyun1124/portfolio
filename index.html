@@ -157,7 +157,7 @@
 								<p>Java, Spring, ExtJS, JavaScript, SQL</p>
 								<b class="text-primary">주요 업무 </b>
 								<div>
-									<div> - Java, JavaScript, ExtJS 기반 웹 서비스 개발/운영</div>
+									<div> - Java, Spring, JSP, JavaScript, ExtJS 기반 웹 서비스 개발/운영</div>
 									<div> - 권한관리 프로세스 전 과정 단독 개발</div>
 									<div> - 대량 데이터 이관 및 자동화 프로그램 개발</div>
 									<div> - BatchJob 설계 및 구현</div>
@@ -251,13 +251,21 @@
 									<h2>GSI ERP 구축 프로젝트</h2>
 								</div>
 								<span class="position">LG화학</span>
-								<div> <b class="text-dark">기술 스택 : </b>Java, Javascript, ExtJS, SQL
+								<div> <b class="text-dark">기술 스택 : </b>Java, Spring, JavaScript, JSP, Oracle, MySQL
 								</div>
-								<div> <b class="text-dark">역할 : </b> 대량의 MDM 데이터를 이관하기 위한 화면 개발, Batch Job 설계 및 구현</div>
+								<div> <b class="text-dark">역할 : </b> 대량의 MDM 데이터를 이관하기 위한 화면 개발, Batch Job 설계 및 구현
+									<ul style="margin-bottom: 0;">
+										<li>Spring Batch 기반 이관 프로그램을 설계 및 개발하여 반복적인 대량 데이터 이관 작업을 자동화</li>
+										<li>싱글스레드 구조를  멀티스레드 구조로 리팩토링</li>
+										<li>ERP 시스템과의 연계를 위해 EAI를 통한 WSDL기반 SOAP API 수신 프로그램 개발</li>
+										<li>장기 프로젝트 운영을 고려한 구조 설계 및 유지보수</li>
+									</ul>
+								</div>
 								<div> <b class="text-dark">성과 : </b>
 									<ul style="margin-bottom: 0;">
-										<li>데이터 삭제, 삽입, 이관 등의 작업 자동화 기존 2일 소요 작업을 8시간 이내로 단축</li>
-										<li>반복 업무에 유연하게 대응할 수 있도록 재사용 가능한 모듈형 구조로 설계하여 효율성과 유지보수성을 확보</li>
+										<li>기존 2일 이상 소요되던 이관 작업 → 8시간 이내 단축</li>
+										<li>코드 재사용 가능, 유지보수성 및 생산성 향상</li>
+										<li>ERP 연계 안정성 및 오류 90% 이상 감소</li>
 									</ul>
 								</div>
 							</div>
@@ -270,14 +278,20 @@
 								<span class="date">2023.12-2024.03</span>
 								<h2>권한 관리 프로세스 구축 및 화면 개발</h2>
 								<span class="position">LG화학</span>
-								<div> <b class="text-dark">기술 스택 : </b>Java, Javascript, ExtJS, SQL
+								<div> <b class="text-dark">기술 스택 : </b>Java, Spring, JavaScript, JSP, Oracle, MySQL
 								</div>
-								<div> <b class="text-dark">역할 : </b> 권한 프로세스(요청-승인-권한 부여)설계 및 화면 개발, Batch Job 포함 전 과정 단독 개발</div>
+								<div> <b class="text-dark">역할 : </b> 권한 신청-승인-부여 프로세스 설계 및 화면 개발
+									<ul style="margin-bottom: 0;">
+										<li>권한 신청 → 승인 → 부여 전체 프로세스를 자동화 시스템으로 설계 및 구현</li>
+										<li>기존 운영팀의 수작업 권한 부여 업무를 시스템화하여 실시간 반영 가능하도록 개선</li>
+										<li>대용량 권한 데이터를 효율적으로 처리하기 위해 Batch Job 최적화 및 인덱스 설계 수행</li>
+									</ul>
+								</div>
 								<div> <b class="text-dark">성과 : </b>
 									<ul style="margin-bottom: 0;">
-										<li>운영팀의 CSR(고객 서비스 요청) 중 50% 이상을 차지하던 권한 부여 업무를 자동화하여 운영 리소스 절감</li>
-										<li>사용자 스스로 권한을 신청하고 승인 후 바로 반영하여 업무 효율 개선</li>
-										<li>부서 정보 테이블에 인덱스 추가 → batchjob 처리 시간 5시간에서 6분으로 단축</li>
+										<li>기존 권한 부여 기간 1~2주 → 즉시 반영으로 단축 → 사용자 만족도 및 운영 효율 향상</li>
+										<li>자주 조회되는 컬럼에 인덱스 추가, 전체 테이블 스캔 해소 → 작업 시간 5시간에서 10분 이내로 단축</li>
+										<li>권한 배치 지연 문제 해결, 시스템 안정성 및 일관성 강화</li>
 									</ul>
 								</div>
 							</div>
