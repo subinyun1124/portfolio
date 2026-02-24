@@ -146,90 +146,116 @@
 
 					<div id="page-2" class="page two">
 						<h2 class="heading">Work Experience</h2>
+
+						<!-- ================= 이지미디어 ================= -->
 						<div class="resume-wrap d-flex ftco-animate">
 							<div class="icon d-flex align-items-center justify-content-center">
 								<span class="flaticon-ideas"></span>
 							</div>
+					
 							<div class="text pl-3">
-								<span class="date">2025.08-2025.12</span>
+								<span class="date">2025.08 - 2025.12</span>
 								<h2>Web Developer</h2>
 								<span class="position">이지미디어</span>
-								<p>참좋은여행(항공) 고도화 프로젝트 - 웹개발 / 주임<br /></p>
+								<p>참좋은여행(항공) 고도화 프로젝트 - 웹개발 / 주임</p>
+					
 								<b class="text-primary">기술 스택</b>
 								<p>Java 17, Spring Boot, MyBatis, MySQL, SVN, Jenkins</p>
-								<b class="text-primary"> 담당 업무 </b>
+					
+								<b class="text-primary">담당 업무</b>
 								<div>
-									<div> - PG사 연동을 통한 항공권 결제 기능 설계 및 구현</div>
-									<div> - LCC(저비용 항공사) 항공권 조회/예약/발권/환불 API 연동 개발</div>
+									<div>- PG사 연동을 통한 항공권 결제 기능 설계 및 구현</div>
+									<div>- LCC 항공권 조회/예약/발권/환불 API 연동 개발</div>
 								</div>
-								<b class="text-primary"> 도입 배경 </b>
+					
+								<b class="text-primary">도입 배경</b>
 								<div>
-									<div> - 기존 여행사 항공권은 PG 모듈을 통한 카드 결제 구조로 운영 중이었으나 현금 정산 방식의 외항사 항공권을 PG 결제로 처리해야 하는 요구사항 발생</div>
-									<div> - 결제는 카드 기준, 발권/정산은 현금 기준으로 처리해야 했기 때문에 결제, 발권, 환불 프로세스를 논리적으로 분리하여 설계</div>
+									<div>- 기존 PG 모듈 기반 카드 결제 구조에서 현금 정산 방식 외항사 항공권을 PG 결제로 처리해야 하는 요구 발생</div>
+									<div>- 결제(카드)와 발권/정산(현금)을 분리 설계 필요</div>
 								</div>
-								<b class="text-primary"> 기술 설계 </b>
+					
+								<b class="text-primary">기술 설계</b>
 								<div>
-									<div> - DB 테이블에 현금 항공사 구분 컬럼을 추가하여 항공권 유형별 분기 로직을 서비스 레이어에서 처리하도록 구조 개선</div>
-									<div> - 기존 PG 모듈 방식과 Key-in 결제 방식을 Strategy Pattern 기반으로 분리하여 결제 로직의 확장성과 유지보수성 확보</div>
-									<div> - 결제 승인 후 발권 실패, 환불 오류 등 예외 상황 발생 시 PG 취소 API를 재호출하는 자동 후보정 처리 로직 구현</div>
-									<div> - 주요 단계별 로그를 남겨 운영 중 장애 원인 추적이 가능하도록 로그 모니터링</div>
+									<div>- 현금 항공사 구분 컬럼 추가 및 서비스 레이어 분기 처리</div>
+									<div>- Strategy Pattern 기반 결제 로직 분리로 확장성 확보</div>
+									<div>- 발권 실패/환불 오류 시 PG 취소 API 자동 후보정 로직 구현</div>
+									<div>- 단계별 로그 설계로 장애 추적 가능하도록 개선</div>
 								</div>
-								<b class="text-primary"> 성과 </b>
+					
+								<b class="text-primary">성과</b>
 								<div>
-									<div> - 결제-발권-환불 전 과정에 대한 예외 처리를 통하여 데이터 무결성 발생 가능성 최소화</div>
-									<div> - 로그 데이터로 장애 대응 및 이슈 추적 용이성 확보</div>
-								</div>
-								</p>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2021.09-2025.02(3년 6개월)</span>
-								<h2>Backend Developer</h2>
-								<span class="position">투비웨이</span>
-								<p>GSI 구축 프로젝트 (2022.08~2023.05 / 2024.08~2025.02)<br /></p>
-								<b class="text-primary">기술 스택</b>
-								<p>Java 11, Spring Boot, Oracle, Tibero, SVN, Jenkins</p>
-								<b class="text-primary"> 담당 업무 </b>
-								<div>
-									<div> - 전사 데이터 이관 및 동기화를 위한 Spring Batch 기반 대용량 Batch Job 설계 및 구현</div>
-									<div> - 인터페이스 연계를 포함한 데이터 처리 프로세스 개발</div>
-								</div>
-								<b class="text-primary"> 기술 선택 이유 및 구조 </b>
-								<div>
-									<div> - 기존 시스템을 이관 전날까지 운영해야 했기 때문에 실시간 반영이 불가능하여 Batch 기반 처리 구조 채택</div>
-									<div> - 원천 데이터 추출, 변환, 정합성 검증, 연계 단계로 Step을 분리 설계하여 재처리 및 장애 대응 가능하도록 구성</div>
-									<div> - 기능 단위로 모듈화하여 재실행 및 타 프로젝트 재사용 가능하도록 구성</div>
-								</div>
-								<b class="text-primary"> 성과 및 트러블 슈팅 경험 </b>
-								<div>
-									<div> - 대용량 데이터(30만 건 이상)를 chunk 기반 처리 구조로 설계하여 안정성 확보</div>
-									<div> - 데이터 이관 처리 시간 12시간 → 8시간 이내 단축 (약 33% 개선)</div>
-									<div> - 오류 발생 건수 90% 이상 감소</div>
-								</div>
-								<p>권한 관리 프로세스 구축 및 화면 개발 (2023.12~2024.03)<br /></p>
-								<b class="text-primary"> 담당 업무 </b>
-								<div>
-									<div> - 전사 권한 관리 프로세스 설계 및 시스템 구축</div>
-									<div> - 권한 신청-승인-부여 전 과정을 자동화하는 백엔드 및 웹 개발</div>
-								</div>
-								<b class="text-primary"> 도입 배경 및 기술 선택 이유 </b>
-								<div>
-									<div> - 전체 CS 문의 중 약 50% 이상이 권한 부여 요청이었으며, 수작업 기반 처리 구조로 인해 운영 리소스 부담이 높은 상황</div>
-									<div> - 처리 지연(최대 1주 이상) 문제 해결을 위한 자동화 추진</div>
-								</div>
-								<b class="text-primary"> 프로세스 및 시스템 설계 </b>
-								<div>
-									<div> - 워크플로우 기반 권한 관리 구조 설계 : 권한 신청 → 승인 → 부여 전 과정을 시스템화</div>
-									<div> - 1분 주기의 Batch를 통해 승인 완료 시 권한이 자동 반영되도록 연계 로직 구현</div>
-								</div>
-								<b class="text-primary"> 성능 개선 및 성과 </b>
-								<div>
-									<div> - 권한 데이터 동기화 Batch 수행 시 인덱스 부재로 Full Scan 발생 확인 → 인덱스 추가 → 처리 시간이 5시간에서 약 20분 이내로 단축</div>
-									<div> - 권한 부여 처리 기간 1주일에서 즉시 반영</div>
-									<div> - 배치 지연 및 누락 이슈 제거로 운영 안정성 및 사용자 만족도 향상</div>
+									<div>- 결제~환불 전 과정 예외 처리로 데이터 무결성 리스크 최소화</div>
+									<div>- 로그 기반 장애 대응 및 이슈 추적 용이성 확보</div>
 								</div>
 							</div>
 						</div>
-					</div>	
+					
+						<!-- ================= 투비웨이 ================= -->
+						<div class="resume-wrap d-flex ftco-animate mt-5">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
+							</div>
+					
+							<div class="text pl-3">
+								<span class="date">2021.09 - 2025.02 (3년 6개월)</span>
+								<h2>Backend Developer</h2>
+								<span class="position">투비웨이</span>
+					
+								<p><strong>GSI 구축 프로젝트 (2022.08 ~ 2023.05 / 2024.08 ~ 2025.02)</strong></p>
+					
+								<b class="text-primary">기술 스택</b>
+								<p>Java 11, Spring Boot, Oracle, Tibero, SVN, Jenkins</p>
+					
+								<b class="text-primary">담당 업무</b>
+								<div>
+									<div>- Spring Batch 기반 대용량 Batch Job 설계 및 구현</div>
+									<div>- 인터페이스 연계를 포함한 데이터 처리 프로세스 개발</div>
+								</div>
+					
+								<b class="text-primary">기술 선택 이유 및 구조</b>
+								<div>
+									<div>- 기존 시스템 운영 유지 필요로 Batch 기반 처리 구조 채택</div>
+									<div>- 추출 → 변환 → 정합성 → 연계 단계 분리 설계</div>
+									<div>- 기능 단위 모듈화로 재실행 및 재사용성 확보</div>
+								</div>
+					
+								<b class="text-primary">성과 및 트러블슈팅</b>
+								<div>
+									<div>- 30만 건 이상 chunk 기반 처리로 안정성 확보</div>
+									<div>- 처리 시간 12시간 → 8시간 단축 (약 33% 개선)</div>
+									<div>- 오류 발생 건수 90% 이상 감소</div>
+								</div>
+					
+								<p class="mt-4"><strong>권한 관리 프로세스 구축 (2023.12 ~ 2024.03)</strong></p>
+					
+								<b class="text-primary">담당 업무</b>
+								<div>
+									<div>- 전사 권한 관리 프로세스 설계 및 시스템 구축</div>
+									<div>- 신청 → 승인 → 부여 자동화 백엔드 및 웹 개발</div>
+								</div>
+					
+								<b class="text-primary">도입 배경</b>
+								<div>
+									<div>- CS 문의의 50% 이상이 권한 요청</div>
+									<div>- 수작업 기반 처리로 운영 리소스 부담 및 최대 1주 지연 발생</div>
+								</div>
+					
+								<b class="text-primary">설계 및 개선</b>
+								<div>
+									<div>- 워크플로우 기반 권한 승인 구조 설계</div>
+									<div>- 1분 주기 Batch로 승인 완료 시 자동 반영</div>
+									<div>- 인덱스 추가로 Full Scan 제거 (5시간 → 20분 단축)</div>
+								</div>
+					
+								<b class="text-primary">성과</b>
+								<div>
+									<div>- 권한 반영 1주 → 즉시 처리</div>
+									<div>- 배치 지연 및 누락 이슈 제거</div>
+								</div>
+							</div>
+						</div>
+					
+					</div>
 					
 					<div id="page-3" class="page three">
 						<h2 class="heading">Skills</h2>
@@ -238,8 +264,8 @@
 								<div class="progress-wrap ftco-animate">
 									<h3>Java</h3>
 									<div class="progress">
-										<div class="progress-bar color-1" role="progressbar" aria-valuenow="90"
-											aria-valuemin="0" aria-valuemax="100" style="width:90%">
+										<div class="progress-bar color-1" role="progressbar" aria-valuenow="85"
+											aria-valuemin="0" aria-valuemax="100" style="width:85%">
 											<span>85%</span>
 										</div>
 									</div>
@@ -249,8 +275,8 @@
 								<div class="progress-wrap ftco-animate">
 									<h3>SpringBoot</h3>
 									<div class="progress">
-										<div class="progress-bar color-2" role="progressbar" aria-valuenow="88"
-											aria-valuemin="0" aria-valuemax="100" style="width:88%">
+										<div class="progress-bar color-2" role="progressbar" aria-valuenow="80"
+											aria-valuemin="0" aria-valuemax="100" style="width:80%">
 											<span>80%</span>
 										</div>
 									</div>
@@ -271,8 +297,8 @@
 								<div class="progress-wrap ftco-animate">
 									<h3>JSP</h3>
 									<div class="progress">
-										<div class="progress-bar color-4" role="progressbar" aria-valuenow="88"
-											aria-valuemin="0" aria-valuemax="100" style="width:88%">
+										<div class="progress-bar color-4" role="progressbar" aria-valuenow="85"
+											aria-valuemin="0" aria-valuemax="100" style="width:85%">
 											<span>85%</span>
 										</div>
 									</div>
@@ -293,8 +319,8 @@
 								<div class="progress-wrap ftco-animate">
 									<h3>AI</h3>
 									<div class="progress">
-										<div class="progress-bar color-6" role="progressbar" aria-valuenow="85"
-											aria-valuemin="0" aria-valuemax="100" style="width:85%">
+										<div class="progress-bar color-6" role="progressbar" aria-valuenow="70"
+											aria-valuemin="0" aria-valuemax="100" style="width:70%">
 											<span>70%</span>
 										</div>
 									</div>
